@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+.mt-10 {
+	  margin-top: 2em;
+}
+
+h1 {
+	  font-size: 4em;
+}
+
+body {
+	  margin: 0;
+	  padding: 0;
+	  height: 100vh;
+	  width: 100vw;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  max-width: none;
+}
+
+.center {
+	  padding-bottom: 5em;
+	  width: 50vw;
+	  height: 50vh;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+}
+
+form {
+	  display: flex;
+}
