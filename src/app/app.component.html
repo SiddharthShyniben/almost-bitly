@@ -1,12 +1,1 @@
-<section class='center'>
-	  <h1>(Almost) Bitly</h1>
-	  <p>Shorten URLs, with analytics.</p>
-	  <form class='mt-10' (ngSubmit)='onSubmit()' #urlForm='ngForm'>
-		  <input [(ngModel)]='url' name='url' type='url' placeholder='https://example.com' id='url' required>
-		  <button [disabled]='!urlForm.form.valid'>Shorten!</button>
-	  </form>
-	  <div *ngIf='done'>
-		  <p>Your URL: http://localhost:4200/{{urlHash}}</p>
-		  <p>Your statistics URL: http://localhost:4200/{{statsHash}}</p> 
-	  </div>
-</section>
+<router-outlet></router-outlet>

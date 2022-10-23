@@ -4,10 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
+import { RedirectComponent } from './components/redirect/redirect.component';
 
 @NgModule({
 	  declarations: [
-		  AppComponent
+		  AppComponent,
+    HomeComponent,
+    RedirectComponent
 	  ],
 	  imports: [
 		  BrowserModule,
