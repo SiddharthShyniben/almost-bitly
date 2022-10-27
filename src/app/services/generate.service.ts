@@ -1,9 +1,10 @@
 import {Injectable} from '@angular/core';
 import {Client, Databases, Query} from 'appwrite';
 import {from} from 'rxjs';
+import { environment } from 'src/environments/environment';
 
-const DB_ID = '634fd126d4e38eb8e87b';
-const CL_ID = '634fd12df1885e58f21a';
+const DB_ID = environment.db_id;
+const CL_ID = environment.cl_id;
 
 @Injectable({
 	  providedIn: 'root'
