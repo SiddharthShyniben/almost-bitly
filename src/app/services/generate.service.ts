@@ -32,14 +32,17 @@ export class GenerateService {
 		  })
 	  }
 
-	  getRedirect(hash: string) {
+	  getRedirect(hash: string, update = false) {
 		  return from(new Promise((resolve, reject) => {
 			  const link = this.db.listDocuments(
 				  DB_ID, CL_ID,
 				  [Query.equal('id', hash)]
 			  );
 
-			  link.then(resolve).catch(reject);
+			  link.then(res => {
+				  if (res.documents.length && update) this.db.updateDocument(DB_ID, CL_ID, res.documents[0].$id, {hits: res.documents[0]['hits'] + 1});
+				  resolve(res)
+			  }).catch(reject);
 		  }))
 	  }
 }

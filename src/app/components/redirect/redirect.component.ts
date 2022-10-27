@@ -19,7 +19,7 @@ export class RedirectComponent implements OnInit {
 
 	  ngOnInit(): void {
 		  const hash = this.route.snapshot.params['hash'];
-		  this.generateService.getRedirect(hash).subscribe(result => {
+		  this.generateService.getRedirect(hash, true).subscribe(result => {
 			  if ((result as DBResult).total > 0) {
 				  const link = (result as DBResult).documents[0].url;
 				  window.location.assign(link);
