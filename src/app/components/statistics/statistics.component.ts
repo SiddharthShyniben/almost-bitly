@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {GenerateService} from 'src/app/services/generate.service';
+import {environment} from 'src/environments/environment';
 
 type DBResult = {
 	  total: number;
@@ -18,6 +19,7 @@ export class StatisticsComponent implements OnInit {
 	  url = '';
 	  hash = '';
 	  hits = 0;
+	  root = environment.root;
 
 	  constructor(private route: ActivatedRoute, private generateService: GenerateService) { }
 

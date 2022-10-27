@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+	root: 'https://almost-bit.ly' // Replace with actual domain
 };

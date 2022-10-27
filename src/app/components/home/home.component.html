@@ -6,7 +6,7 @@
 		  <button [disabled]='!urlForm.form.valid'>Shorten!</button>
 	  </form>
 	  <div *ngIf='done'>
-		  <p>Your URL: http://localhost:4200/g/{{urlHash}}</p>
-		  <p>Your statistics URL: http://localhost:4200/s/{{statsHash}}</p> 
+		  <p>Your URL: {{root}}/g/{{urlHash}}</p>
+		  <p>Your statistics URL: {{root}}/s/{{statsHash}}</p> 
 	  </div>
 </section>

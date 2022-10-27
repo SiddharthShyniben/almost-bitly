@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { GenerateService } from 'src/app/services/generate.service';
+import {environment} from 'src/environments/environment';
 
 @Component({
 	  selector: 'app-home',
@@ -12,6 +13,7 @@ export class HomeComponent {
 	  done = false;
 	  urlHash = '';
 	  statsHash = '';
+	  root = environment.root;
 
 	  constructor(private generateService: GenerateService) {}
 
