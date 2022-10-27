@@ -36,7 +36,7 @@ export class GenerateService {
 		  return from(new Promise((resolve, reject) => {
 			  const link = this.db.listDocuments(
 				  DB_ID, CL_ID,
-				  [Query.equal('id', hash)]
+				  [Query.equal(update ? 'id' : '$id', hash)]
 			  );
 
 			  link.then(res => {

@@ -1,0 +1,9 @@
+<div *ngIf="success">
+	  <p><b>Shortened URL:</b> https://localhost:4200/{{hash}}</p>
+	  <p><b>Original URL:</b> {{url}}</p>
+	  <p><b>Hits:</b> {{hits}}</p>
+</div>
+
+<div *ngIf='failed'>
+	  Link not found! <a routerLink='/'>Go back home.</a>
+</div>
